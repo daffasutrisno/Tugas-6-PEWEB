@@ -1,0 +1,103 @@
+body {
+  font-family: "Arial", sans-serif;
+  background: linear-gradient(135deg, #2b5876 0%, #4e4376 100%);
+  color: white;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  padding: 1rem;
+  position: relative;
+  z-index: 1000;
+  transition: all 0.3s ease-in-out;
+}
+
+header.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+h1 {
+  font-size: 2.5rem;
+  letter-spacing: 3px;
+  animation: floatTitle 3s infinite alternate;
+}
+
+@keyframes floatTitle {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(10px);
+  }
+}
+
+.courses-section {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.course-card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 1.5rem;
+  margin: 1rem;
+  width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  position: relative;
+}
+
+.course-card:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: scale(1.05);
+}
+
+.flag {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin: 10px 0;
+}
+
+p {
+  font-size: 1rem;
+}
+
+.duration,
+.level {
+  display: block;
+  margin: 5px 0;
+  font-weight: bold;
+}
+
+.more-info {
+  text-align: center;
+  padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.5);
+  margin-top: 2rem;
+  border-radius: 15px;
+  max-width: 800px;
+  margin: 2rem auto;
+  color: white;
+}
+
+@media (max-width: 768px) {
+  .courses-section {
+    flex-direction: column;
+    align-items: center;
+  }
+}
